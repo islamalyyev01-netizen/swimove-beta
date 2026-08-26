@@ -8,7 +8,7 @@
   --card: #121212;
   --pad-x: max(1.25rem, env(safe-area-inset-left));
   --pad-r: max(1.25rem, env(safe-area-inset-right));
-  --dock-h: 5.1rem;
+  --dock-h: 0;
   --ease: cubic-bezier(0.22, 1, 0.36, 1);
   --max: 34rem;
   --font: Manrope, ui-sans-serif, system-ui, sans-serif;
@@ -39,7 +39,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
-  padding-bottom: calc(var(--dock-h) + env(safe-area-inset-bottom));
+  padding-bottom: calc(2rem + env(safe-area-inset-bottom));
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
@@ -74,7 +74,7 @@ body {
   z-index: 20;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 1rem;
   min-height: 3.25rem;
   padding: max(0.65rem, env(safe-area-inset-top)) var(--pad-r) 0.65rem var(--pad-x);
@@ -682,6 +682,11 @@ body {
   transition: transform 0.45s var(--ease), filter 0.45s var(--ease);
 }
 
+.neon-card__logo--garmin {
+  max-width: 12.5rem;
+  height: 2.35rem;
+}
+
 .neon-card__text {
   margin: 0;
   font-family: var(--font);
@@ -783,14 +788,7 @@ body {
 }
 
 .dock {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 30;
-  padding: 0.65rem var(--pad-r) calc(0.65rem + env(safe-area-inset-bottom)) var(--pad-x);
-  background: linear-gradient(180deg, transparent, rgba(5, 5, 5, 0.92) 28%, var(--bg));
-  border-top: 1px solid var(--line);
+  display: none;
 }
 
 @keyframes rise {
