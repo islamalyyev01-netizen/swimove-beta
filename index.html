@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta
       name="description"
-      content="Закрытая бета Swimove — персональный план плавания. Скачайте через TestFlight."
+      content="Swimove — персональный план плавания под ваш уровень и цель. Закрытая бета в TestFlight."
     />
     <meta name="theme-color" content="#050505" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Swimove — бета-тест</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,34 +19,104 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="atmosphere" aria-hidden="true">
-      <div class="atmosphere__photo"></div>
-      <div class="atmosphere__veil"></div>
-      <div class="atmosphere__grain"></div>
-    </div>
+    <header class="top">
+      <span class="top__brand">Swimove</span>
+      <a class="top__link" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer"
+        >TestFlight</a
+      >
+    </header>
 
-    <main class="hero">
-      <p class="brand">Swimove</p>
-      <h1 class="headline">Персональный план плавания — сейчас в закрытой бете</h1>
-      <p class="lede">
-        Тестируем регистрацию, план тренировок и кабинет. Нужен iPhone и приложение TestFlight.
-      </p>
-      <div class="cta">
-        <a
-          class="btn"
-          href="https://testflight.apple.com/join/fqM8ntWF"
-          rel="noopener noreferrer"
-        >
-          Скачать в TestFlight
-        </a>
-        <p class="hint">Публичная ссылка · iOS 16+</p>
+    <section class="hero" aria-label="Главный экран">
+      <div class="hero__media" aria-hidden="true">
+        <div class="hero__photo"></div>
+        <div class="hero__veil"></div>
       </div>
+      <div class="hero__copy">
+        <p class="brand">Swimove</p>
+        <h1 class="headline">План плавания, собранный под вас</h1>
+        <p class="lede">
+          Не универсальная программа из интернета — нагрузка под уровень, цель и самочувствие.
+        </p>
+        <a class="btn" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
+          Скачать бета в TestFlight
+        </a>
+        <p class="hint">iPhone · iOS 16+ · нужен TestFlight</p>
+      </div>
+    </section>
+
+    <main class="page">
+      <section class="block" id="product">
+        <h2 class="block__title">Что это</h2>
+        <p class="block__text">
+          Swimove — приложение для тех, кто плавает регулярно и хочет понятный путь вперёд: от
+          анкеты до персональных тренировок на 4 недели. План строится из проверенных методик, а не
+          «на глаз».
+        </p>
+        <p class="block__text">
+          Внутри — онбординг, сборка плана, экран тренировки и прогресс по метрам и сессиям. Сейчас
+          открыта закрытая бета: проверяем, как это ощущается в реальной жизни.
+        </p>
+      </section>
+
+      <section class="block" id="audience">
+        <h2 class="block__title">Для кого</h2>
+        <ul class="list">
+          <li>
+            <strong>Любители бассейна</strong>
+            <span>уже плаваете 2–4 раза в неделю и хотите систему, а не хаотичные сеты</span>
+          </li>
+          <li>
+            <strong>Новички с целью</strong>
+            <span>хотите войти в режим без перегруза и понятных «что делать сегодня»</span>
+          </li>
+          <li>
+            <strong>Готовящиеся к старту</strong>
+            <span>нужна структура под дистанцию, выносливость или темп — без тренера рядом</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block" id="value">
+        <h2 class="block__title">Зачем это нужно</h2>
+        <ul class="list">
+          <li>
+            <strong>Персональная нагрузка</strong>
+            <span>объём и сложность растут под ваш уровень, а не под «среднего» пловца</span>
+          </li>
+          <li>
+            <strong>Ясность на воде</strong>
+            <span>на каждой сессии видно, что плыть и зачем — меньше сомнений у бортика</span>
+          </li>
+          <li>
+            <strong>Прогресс, который видно</strong>
+            <span>серия, метры и закрытые тренировки — чтобы чувствовать движение вперёд</span>
+          </li>
+        </ul>
+      </section>
+
+      <section class="block block--cta" id="beta">
+        <h2 class="block__title">Как попасть в бету</h2>
+        <p class="block__text">
+          Установите TestFlight с App Store, откройте ссылку на iPhone и примите приглашение в
+          Swimove. Пишите, что ломается и что непонятно — это и есть смысл беты.
+        </p>
+        <a class="btn btn--block" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
+          Открыть TestFlight
+        </a>
+        <p class="hint">Публичная ссылка · https://testflight.apple.com/join/fqM8ntWF</p>
+      </section>
     </main>
 
     <footer class="foot">
       <span>© Swimove</span>
       <span class="foot__sep" aria-hidden="true">·</span>
-      <span>Бета для раннего доступа</span>
+      <span>Закрытая бета</span>
     </footer>
+
+    <div class="dock" role="region" aria-label="Скачать бета">
+      <a class="btn btn--dock" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
+        Скачать в TestFlight
+      </a>
+    </div>
   </body>
 </html>
