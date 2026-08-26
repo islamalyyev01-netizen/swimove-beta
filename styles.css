@@ -475,16 +475,17 @@ body {
 
 .zones__row {
   display: grid;
-  grid-template-columns: 1.7rem 1fr;
+  grid-template-columns: 4.25rem 1fr;
   align-items: center;
   gap: 0.55rem;
 }
 
 .zones__label {
   font-family: var(--font);
-  font-size: 0.75rem;
-  font-weight: 700;
+  font-size: 0.78rem;
+  font-weight: 600;
   color: var(--dim);
+  white-space: nowrap;
 }
 
 .zones__track {
