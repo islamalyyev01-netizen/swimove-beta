@@ -94,6 +94,147 @@
         </ul>
       </section>
 
+      <section class="block" id="analytics" aria-labelledby="analytics-title">
+        <h2 class="block__title" id="analytics-title">Наглядная аналитика без перегруза</h2>
+        <p class="block__lead">
+          Каждый отрезок, пульсовая зона и недельный объём — на понятных графиках.
+        </p>
+
+        <div class="viz" data-viz>
+          <div class="viz__tabs" role="tablist" aria-label="Тип графика">
+            <button type="button" class="viz__tab is-active" role="tab" aria-selected="true" data-panel="volume">
+              Объём
+            </button>
+            <button type="button" class="viz__tab" role="tab" aria-selected="false" data-panel="zones">
+              Пульс
+            </button>
+            <button type="button" class="viz__tab" role="tab" aria-selected="false" data-panel="taper">
+              Готовность
+            </button>
+          </div>
+
+          <div class="glass glass--cyan" data-panel-view="volume" role="tabpanel">
+            <div class="glass__glow" aria-hidden="true"></div>
+            <div class="chart-head">
+              <span class="chart-kicker">Weekly Volume Load</span>
+              <strong class="chart-metric">18,4&nbsp;км</strong>
+            </div>
+            <div class="bars" aria-hidden="true">
+              <div class="bars__col"><span class="bars__fill" style="--h: 42%"></span><em>Пн</em></div>
+              <div class="bars__col"><span class="bars__fill" style="--h: 68%"></span><em>Вт</em></div>
+              <div class="bars__col"><span class="bars__fill" style="--h: 28%"></span><em>Ср</em></div>
+              <div class="bars__col"><span class="bars__fill" style="--h: 86%"></span><em>Чт</em></div>
+              <div class="bars__col"><span class="bars__fill" style="--h: 54%"></span><em>Пт</em></div>
+              <div class="bars__col"><span class="bars__fill bars__fill--peak" style="--h: 96%"></span><em>Сб</em></div>
+              <div class="bars__col"><span class="bars__fill" style="--h: 18%"></span><em>Вс</em></div>
+            </div>
+            <p class="chart-note">Недельная нагрузка растёт плавно — без скачков «на авось».</p>
+          </div>
+
+          <div class="glass glass--zones is-hidden" data-panel-view="zones" role="tabpanel" hidden>
+            <div class="glass__glow glass__glow--zones" aria-hidden="true"></div>
+            <div class="chart-head">
+              <span class="chart-kicker">Пульсовые зоны · AeT</span>
+              <strong class="chart-metric">AeT · Z2</strong>
+            </div>
+            <div class="zones" aria-hidden="true">
+              <div class="zones__row"><span class="zones__label">Z1</span><div class="zones__track"><i style="--w: 22%; --c: #34d399"></i></div></div>
+              <div class="zones__row"><span class="zones__label">Z2</span><div class="zones__track"><i style="--w: 48%; --c: #4ade80"></i></div></div>
+              <div class="zones__row"><span class="zones__label">Z3</span><div class="zones__track"><i style="--w: 18%; --c: #fbbf24"></i></div></div>
+              <div class="zones__row"><span class="zones__label">Z4</span><div class="zones__track"><i style="--w: 8%; --c: #fb923c"></i></div></div>
+              <div class="zones__row"><span class="zones__label">Z5</span><div class="zones__track"><i style="--w: 4%; --c: #f87171"></i></div></div>
+            </div>
+            <p class="chart-note">Видно, сколько времени в аэробной зоне и где порог.</p>
+          </div>
+
+          <div class="glass glass--gold is-hidden" data-panel-view="taper" role="tabpanel" hidden>
+            <div class="glass__glow glass__glow--gold" aria-hidden="true"></div>
+            <div class="chart-head">
+              <span class="chart-kicker">Tapering &amp; Readiness</span>
+              <strong class="chart-metric">92<span class="chart-metric__unit">/100</span></strong>
+            </div>
+            <svg class="taper" viewBox="0 0 320 120" role="img" aria-label="График готовности к старту">
+              <defs>
+                <linearGradient id="taperFill" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#f5c518" stop-opacity="0.45" />
+                  <stop offset="100%" stop-color="#f5c518" stop-opacity="0" />
+                </linearGradient>
+                <linearGradient id="taperStroke" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#a8b2c1" />
+                  <stop offset="100%" stop-color="#f5c518" />
+                </linearGradient>
+              </defs>
+              <path
+                class="taper__area"
+                d="M8,88 C48,82 72,70 100,62 C140,50 168,58 200,44 C236,28 268,34 312,22 L312,112 L8,112 Z"
+                fill="url(#taperFill)"
+              />
+              <path
+                class="taper__line"
+                d="M8,88 C48,82 72,70 100,62 C140,50 168,58 200,44 C236,28 268,34 312,22"
+                fill="none"
+                stroke="url(#taperStroke)"
+                stroke-width="3"
+                stroke-linecap="round"
+              />
+              <circle class="taper__dot" cx="312" cy="22" r="5" fill="#f5c518" />
+            </svg>
+            <p class="chart-note">К старту объём снижается, готовность растёт — как в нормальном taper.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block" id="integrations" aria-labelledby="integrations-title">
+        <h2 class="block__title" id="integrations-title">Синхронизация в один клик</h2>
+        <p class="block__lead">
+          Автоматический импорт тренировок с Apple Watch и Garmin.
+        </p>
+
+        <div class="glass glass--devices">
+          <div class="glass__glow glass__glow--devices" aria-hidden="true"></div>
+          <div class="devices">
+            <div class="device">
+              <div class="device__logo device__logo--apple" aria-hidden="true">
+                <svg viewBox="0 0 48 48" width="34" height="34">
+                  <path
+                    fill="#ff2d55"
+                    d="M24 38.2c-.4 0-.8-.1-1.1-.4C16.2 32 12 27.2 12 22.1c0-3.7 2.7-6.6 6.2-6.6 2.1 0 3.9 1.1 5 2.8 1.1-1.7 2.9-2.8 5-2.8 3.5 0 6.2 2.9 6.2 6.6 0 5.1-4.2 9.9-10.9 15.7-.3.3-.7.4-1.1.4z"
+                  />
+                </svg>
+              </div>
+              <div class="device__copy">
+                <strong>Apple Watch</strong>
+                <span>через Apple Health</span>
+              </div>
+            </div>
+
+            <div class="device__divider" aria-hidden="true"></div>
+
+            <div class="device">
+              <div class="device__logo device__logo--garmin" aria-hidden="true">
+                <svg viewBox="0 0 48 48" width="36" height="36">
+                  <circle cx="24" cy="24" r="18" fill="none" stroke="#00a9e0" stroke-width="2.5" />
+                  <path
+                    fill="#00a9e0"
+                    d="M14 28.5 L24 12.5 L34 28.5 Z"
+                  />
+                  <circle cx="24" cy="26.5" r="3.2" fill="#050505" />
+                </svg>
+              </div>
+              <div class="device__copy">
+                <strong>Garmin</strong>
+                <span>часы и пул-сессии</span>
+              </div>
+            </div>
+          </div>
+
+          <p class="beta-pill">
+            <span class="beta-pill__dot" aria-hidden="true"></span>
+            Поддержка в бета-версии
+          </p>
+        </div>
+      </section>
+
       <section class="block block--cta" id="beta">
         <h2 class="block__title">Как попасть в бету</h2>
         <p class="block__text">
@@ -118,5 +259,7 @@
         Скачать в TestFlight
       </a>
     </div>
+
+    <script src="./landing.js" defer></script>
   </body>
 </html>
