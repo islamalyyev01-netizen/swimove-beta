@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta
       name="description"
-      content="Swimove — персональный план плавания под ваш уровень и цель. Закрытая бета в TestFlight."
+      content="Swimove — понятные и эффективные тренировки по плаванию. Закрытая бета в TestFlight."
     />
     <meta name="theme-color" content="#050505" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Swimove — бета-тест</title>
+    <title>Swimove — понятные тренировки по плаванию</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,9 +33,10 @@
       </div>
       <div class="hero__copy">
         <p class="brand">Swimove</p>
-        <h1 class="headline">План плавания, собранный под вас</h1>
+        <h1 class="headline">Понятные и эффективные тренировки по плаванию</h1>
         <p class="lede">
-          Не универсальная программа из интернета — нагрузка под уровень, цель и самочувствие.
+          Забудь про мокрые бумажки на бортике и хаотичные заплывы «по ощущениям». Swimove выстраивает
+          чёткую систему под твой уровень, считает недельный объём и готовит к целевым стартам.
         </p>
         <a class="btn" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
           Скачать бета в TestFlight
@@ -45,51 +46,24 @@
     </section>
 
     <main class="page">
-      <section class="block" id="product">
-        <h2 class="block__title">Что это</h2>
-        <p class="block__text">
-          Swimove — приложение для тех, кто плавает регулярно и хочет понятный путь вперёд: от
-          анкеты до персональных тренировок на 4 недели. План строится из проверенных методик, а не
-          «на глаз».
-        </p>
-        <p class="block__text">
-          Внутри — онбординг, сборка плана, экран тренировки и прогресс по метрам и сессиям. Сейчас
-          открыта закрытая бета: проверяем, как это ощущается в реальной жизни.
-        </p>
-      </section>
-
-      <section class="block" id="audience">
-        <h2 class="block__title">Для кого</h2>
+      <section class="block" id="inside">
+        <h2 class="block__title">Что внутри Swimove?</h2>
         <ul class="list">
           <li>
-            <strong>Любители бассейна</strong>
-            <span>уже плаваете 2–4 раза в неделю и хотите систему, а не хаотичные сеты</span>
+            <strong>Структурированные серии</strong>
+            <span>Разминка, фокусные упражнения, основная часть и заминка — в удобном формате.</span>
           </li>
           <li>
-            <strong>Новички с целью</strong>
-            <span>хотите войти в режим без перегруза и понятных «что делать сегодня»</span>
+            <strong>Точный расчёт объёмов</strong>
+            <span>Грамотная прогрессия нагрузки без риска перетренированности.</span>
           </li>
           <li>
-            <strong>Готовящиеся к старту</strong>
-            <span>нужна структура под дистанцию, выносливость или темп — без тренера рядом</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="block" id="value">
-        <h2 class="block__title">Зачем это нужно</h2>
-        <ul class="list">
-          <li>
-            <strong>Персональная нагрузка</strong>
-            <span>объём и сложность растут под ваш уровень, а не под «среднего» пловца</span>
+            <strong>Подготовка к стартам</strong>
+            <span>Подстройка программы под открытую воду, триатлон и бассейн.</span>
           </li>
           <li>
-            <strong>Ясность на воде</strong>
-            <span>на каждой сессии видно, что плыть и зачем — меньше сомнений у бортика</span>
-          </li>
-          <li>
-            <strong>Прогресс, который видно</strong>
-            <span>серия, метры и закрытые тренировки — чтобы чувствовать движение вперёд</span>
+            <strong>Подводка к пику формы</strong>
+            <span>Автоматическое снижение нагрузки (Tapering) перед днями соревнований.</span>
           </li>
         </ul>
       </section>
@@ -185,48 +159,43 @@
       </section>
 
       <section class="block" id="integrations" aria-labelledby="integrations-title">
-        <h2 class="block__title" id="integrations-title">Синхронизация в один клик</h2>
-        <p class="block__lead">
-          Автоматический импорт тренировок с Apple Watch и Garmin.
-        </p>
+        <h2 class="block__title" id="integrations-title">Синхронизация с Apple&nbsp;Watch и Garmin</h2>
+        <p class="block__lead">Живой импорт и экспорт ваших заплывов.</p>
 
         <div class="glass glass--devices">
           <div class="glass__glow glass__glow--devices" aria-hidden="true"></div>
-          <div class="devices">
-            <div class="device">
-              <div class="device__logo device__logo--apple" aria-hidden="true">
-                <svg viewBox="0 0 48 48" width="34" height="34">
-                  <path
-                    fill="#ff2d55"
-                    d="M24 38.2c-.4 0-.8-.1-1.1-.4C16.2 32 12 27.2 12 22.1c0-3.7 2.7-6.6 6.2-6.6 2.1 0 3.9 1.1 5 2.8 1.1-1.7 2.9-2.8 5-2.8 3.5 0 6.2 2.9 6.2 6.6 0 5.1-4.2 9.9-10.9 15.7-.3.3-.7.4-1.1.4z"
-                  />
-                </svg>
-              </div>
-              <div class="device__copy">
-                <strong>Apple Watch</strong>
-                <span>через Apple Health</span>
-              </div>
-            </div>
 
-            <div class="device__divider" aria-hidden="true"></div>
-
-            <div class="device">
-              <div class="device__logo device__logo--garmin" aria-hidden="true">
-                <svg viewBox="0 0 48 48" width="36" height="36">
-                  <circle cx="24" cy="24" r="18" fill="none" stroke="#00a9e0" stroke-width="2.5" />
-                  <path
-                    fill="#00a9e0"
-                    d="M14 28.5 L24 12.5 L34 28.5 Z"
-                  />
-                  <circle cx="24" cy="26.5" r="3.2" fill="#050505" />
-                </svg>
-              </div>
-              <div class="device__copy">
-                <strong>Garmin</strong>
-                <span>часы и пул-сессии</span>
-              </div>
-            </div>
+          <div class="brand-row">
+            <img
+              class="brand-logo brand-logo--apple"
+              src="./assets/apple-watch.png"
+              alt="Apple Watch"
+              width="220"
+              height="47"
+              loading="lazy"
+              decoding="async"
+            />
+            <img
+              class="brand-logo brand-logo--garmin"
+              src="./assets/garmin.png"
+              alt="Garmin"
+              width="180"
+              height="39"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
+
+          <ul class="list list--tight">
+            <li>
+              <strong>Apple Watch</strong>
+              <span>Отслеживание пульсовых зон и отрезков в реальном времени.</span>
+            </li>
+            <li>
+              <strong>Garmin</strong>
+              <span>Автоматическая загрузка интервалов, темпа и показателя гребков (SWOLF).</span>
+            </li>
+          </ul>
 
           <p class="beta-pill">
             <span class="beta-pill__dot" aria-hidden="true"></span>
@@ -236,10 +205,10 @@
       </section>
 
       <section class="block block--cta" id="beta">
-        <h2 class="block__title">Как попасть в бету</h2>
+        <h2 class="block__title">Скачай бета-версию</h2>
         <p class="block__text">
-          Установите TestFlight с App Store, откройте ссылку на iPhone и примите приглашение в
-          Swimove. Пишите, что ломается и что непонятно — это и есть смысл беты.
+          Скачивай бета-версию в TestFlight и тестируй прямо сегодня. Нужен iPhone и приложение
+          TestFlight.
         </p>
         <a class="btn btn--block" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
           Открыть TestFlight

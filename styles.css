@@ -141,17 +141,17 @@ body {
 
 .headline {
   margin: 0 0 0.75rem;
-  max-width: 14ch;
+  max-width: 18ch;
   font-family: Syne, Manrope, sans-serif;
   font-weight: 700;
-  font-size: clamp(1.35rem, 5.6vw, 1.7rem);
+  font-size: clamp(1.28rem, 5.2vw, 1.65rem);
   letter-spacing: -0.025em;
   line-height: 1.18;
 }
 
 .lede {
   margin: 0 0 1.35rem;
-  max-width: 32ch;
+  max-width: 36ch;
   font-size: 1.02rem;
   color: var(--muted);
 }
@@ -669,6 +669,57 @@ body {
   color: var(--muted);
   font-size: 0.98rem;
 }
+
+.list--tight {
+  gap: 0.95rem;
+  margin-top: 1.1rem;
+}
+
+/* Brand logos (transparent PNGs) */
+.brand-row {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  margin-bottom: 0.35rem;
+  padding: 0.35rem 0 0.15rem;
+}
+
+.brand-logo {
+  display: block;
+  height: auto;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.brand-logo--apple {
+  width: min(100%, 13.5rem);
+}
+
+.brand-logo--garmin {
+  width: min(100%, 10.5rem);
+}
+
+@media (min-width: 480px) {
+  .brand-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.25rem;
+  }
+
+  .brand-logo--apple {
+    width: 12.5rem;
+  }
+
+  .brand-logo--garmin {
+    width: 9.5rem;
+  }
+}
+
 
 .block--cta {
   padding-bottom: 2.5rem;
