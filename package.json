@@ -1,0 +1,10 @@
+{
+  "name": "swimove-beta",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Одностраничный лендинг закрытой беты Swimove (TestFlight)",
+  "scripts": {
+    "dev": "npx --yes serve . -p 4173",
+    "start": "npx --yes serve . -p 4173"
+  }
+}
