@@ -18,7 +18,6 @@
       panel.hidden = !on;
       if (on) {
         panel.classList.remove('is-replay');
-        // retrigger bar / zone animations
         void panel.offsetWidth;
         panel.classList.add('is-replay');
       }
@@ -29,7 +28,6 @@
     tab.addEventListener('click', () => activate(tab.getAttribute('data-panel')));
   });
 
-  // first paint animation
   const first = root.querySelector('[data-panel-view="volume"]');
   if (first) first.classList.add('is-replay');
 })();

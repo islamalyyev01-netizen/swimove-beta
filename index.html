@@ -13,12 +13,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Syne:wght@700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
+    <div class="site-bg" aria-hidden="true">
+      <div class="site-bg__photo"></div>
+      <div class="site-bg__veil"></div>
+    </div>
+
     <header class="top">
       <span class="top__brand">Swimove</span>
       <a class="top__link" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer"
@@ -27,10 +32,6 @@
     </header>
 
     <section class="hero" aria-label="Главный экран">
-      <div class="hero__media" aria-hidden="true">
-        <div class="hero__photo"></div>
-        <div class="hero__veil"></div>
-      </div>
       <div class="hero__copy">
         <p class="brand">Swimove</p>
         <h1 class="headline">Понятные и эффективные тренировки по плаванию</h1>
@@ -38,8 +39,8 @@
           Забудь про мокрые бумажки на бортике и хаотичные заплывы «по ощущениям». Swimove выстраивает
           чёткую систему под твой уровень, считает недельный объём и готовит к целевым стартам.
         </p>
-        <a class="btn" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
-          Скачать бета в TestFlight
+        <a class="btn-tf" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
+          Скачать в TestFlight
         </a>
         <p class="hint">iPhone · iOS 16+ · нужен TestFlight</p>
       </div>
@@ -63,7 +64,7 @@
           </li>
           <li>
             <strong>Подводка к пику формы</strong>
-            <span>Автоматическое снижение нагрузки (Tapering) перед днями соревнований.</span>
+            <span>Автоматическое снижение нагрузки перед днями соревнований.</span>
           </li>
         </ul>
       </section>
@@ -82,7 +83,7 @@
             <button type="button" class="viz__tab" role="tab" aria-selected="false" data-panel="zones">
               Пульс
             </button>
-            <button type="button" class="viz__tab" role="tab" aria-selected="false" data-panel="taper">
+            <button type="button" class="viz__tab" role="tab" aria-selected="false" data-panel="ready">
               Готовность
             </button>
           </div>
@@ -90,8 +91,8 @@
           <div class="glass glass--cyan" data-panel-view="volume" role="tabpanel">
             <div class="glass__glow" aria-hidden="true"></div>
             <div class="chart-head">
-              <span class="chart-kicker">Weekly Volume Load</span>
-              <strong class="chart-metric">18,4&nbsp;км</strong>
+              <span class="chart-kicker">Недельный объём</span>
+              <strong class="chart-metric">18,4 км</strong>
             </div>
             <div class="bars" aria-hidden="true">
               <div class="bars__col"><span class="bars__fill" style="--h: 42%"></span><em>Пн</em></div>
@@ -108,24 +109,24 @@
           <div class="glass glass--zones is-hidden" data-panel-view="zones" role="tabpanel" hidden>
             <div class="glass__glow glass__glow--zones" aria-hidden="true"></div>
             <div class="chart-head">
-              <span class="chart-kicker">Пульсовые зоны · AeT</span>
-              <strong class="chart-metric">AeT · Z2</strong>
+              <span class="chart-kicker">Пульсовые зоны</span>
+              <strong class="chart-metric">Порог · Зона 2</strong>
             </div>
             <div class="zones" aria-hidden="true">
-              <div class="zones__row"><span class="zones__label">Z1</span><div class="zones__track"><i style="--w: 22%; --c: #34d399"></i></div></div>
-              <div class="zones__row"><span class="zones__label">Z2</span><div class="zones__track"><i style="--w: 48%; --c: #4ade80"></i></div></div>
-              <div class="zones__row"><span class="zones__label">Z3</span><div class="zones__track"><i style="--w: 18%; --c: #fbbf24"></i></div></div>
-              <div class="zones__row"><span class="zones__label">Z4</span><div class="zones__track"><i style="--w: 8%; --c: #fb923c"></i></div></div>
-              <div class="zones__row"><span class="zones__label">Z5</span><div class="zones__track"><i style="--w: 4%; --c: #f87171"></i></div></div>
+              <div class="zones__row"><span class="zones__label">З1</span><div class="zones__track"><i style="--w: 22%; --c: #34d399"></i></div></div>
+              <div class="zones__row"><span class="zones__label">З2</span><div class="zones__track"><i style="--w: 48%; --c: #4ade80"></i></div></div>
+              <div class="zones__row"><span class="zones__label">З3</span><div class="zones__track"><i style="--w: 18%; --c: #fbbf24"></i></div></div>
+              <div class="zones__row"><span class="zones__label">З4</span><div class="zones__track"><i style="--w: 8%; --c: #fb923c"></i></div></div>
+              <div class="zones__row"><span class="zones__label">З5</span><div class="zones__track"><i style="--w: 4%; --c: #f87171"></i></div></div>
             </div>
-            <p class="chart-note">Видно, сколько времени в аэробной зоне и где порог.</p>
+            <p class="chart-note">Видно, сколько времени в аэробной зоне и где аэробный порог.</p>
           </div>
 
-          <div class="glass glass--gold is-hidden" data-panel-view="taper" role="tabpanel" hidden>
+          <div class="glass glass--gold is-hidden" data-panel-view="ready" role="tabpanel" hidden>
             <div class="glass__glow glass__glow--gold" aria-hidden="true"></div>
             <div class="chart-head">
-              <span class="chart-kicker">Tapering &amp; Readiness</span>
-              <strong class="chart-metric">92<span class="chart-metric__unit">/100</span></strong>
+              <span class="chart-kicker">Подводка и готовность</span>
+              <strong class="chart-metric">92 / 100</strong>
             </div>
             <svg class="taper" viewBox="0 0 320 120" role="img" aria-label="График готовности к старту">
               <defs>
@@ -153,55 +154,47 @@
               />
               <circle class="taper__dot" cx="312" cy="22" r="5" fill="#f5c518" />
             </svg>
-            <p class="chart-note">К старту объём снижается, готовность растёт — как в нормальном taper.</p>
+            <p class="chart-note">
+              К старту объём снижается, готовность растёт — как при нормальной подводке.
+            </p>
           </div>
         </div>
       </section>
 
       <section class="block" id="integrations" aria-labelledby="integrations-title">
-        <h2 class="block__title" id="integrations-title">Синхронизация с Apple&nbsp;Watch и Garmin</h2>
+        <h2 class="block__title" id="integrations-title">Синхронизация с часами</h2>
         <p class="block__lead">Живой импорт и экспорт ваших заплывов.</p>
 
-        <div class="glass glass--devices">
-          <div class="glass__glow glass__glow--devices" aria-hidden="true"></div>
+        <div class="device-grid">
+          <article class="neon-card">
+            <span class="neon-card__glow" aria-hidden="true"></span>
+            <span class="neon-card__inner" aria-hidden="true"></span>
+            <img class="neon-card__logo" src="./assets/apple-watch.png" alt="" width="200" height="43" />
+            <div class="neon-card__content">
+              <h3 class="neon-card__title">Apple Watch</h3>
+              <p class="neon-card__text">
+                Отслеживание пульсовых зон и отрезков в реальном времени.
+              </p>
+            </div>
+          </article>
 
-          <div class="brand-row">
-            <img
-              class="brand-logo brand-logo--apple"
-              src="./assets/apple-watch.png"
-              alt="Apple Watch"
-              width="220"
-              height="47"
-              loading="lazy"
-              decoding="async"
-            />
-            <img
-              class="brand-logo brand-logo--garmin"
-              src="./assets/garmin.png"
-              alt="Garmin"
-              width="180"
-              height="39"
-              loading="lazy"
-              decoding="async"
-            />
-          </div>
-
-          <ul class="list list--tight">
-            <li>
-              <strong>Apple Watch</strong>
-              <span>Отслеживание пульсовых зон и отрезков в реальном времени.</span>
-            </li>
-            <li>
-              <strong>Garmin</strong>
-              <span>Автоматическая загрузка интервалов, темпа и показателя гребков (SWOLF).</span>
-            </li>
-          </ul>
-
-          <p class="beta-pill">
-            <span class="beta-pill__dot" aria-hidden="true"></span>
-            Поддержка в бета-версии
-          </p>
+          <article class="neon-card">
+            <span class="neon-card__glow" aria-hidden="true"></span>
+            <span class="neon-card__inner" aria-hidden="true"></span>
+            <img class="neon-card__logo" src="./assets/garmin.png" alt="" width="200" height="43" />
+            <div class="neon-card__content">
+              <h3 class="neon-card__title">Garmin</h3>
+              <p class="neon-card__text">
+                Автозагрузка интервалов, темпа и эффективности гребка.
+              </p>
+            </div>
+          </article>
         </div>
+
+        <p class="beta-pill">
+          <span class="beta-pill__dot" aria-hidden="true"></span>
+          Поддержка в бета-версии
+        </p>
       </section>
 
       <section class="block block--cta" id="beta">
@@ -210,7 +203,7 @@
           Скачивай бета-версию в TestFlight и тестируй прямо сегодня. Нужен iPhone и приложение
           TestFlight.
         </p>
-        <a class="btn btn--block" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
+        <a class="btn-tf btn-tf--wide" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
           Открыть TestFlight
         </a>
         <p class="hint">Публичная ссылка · https://testflight.apple.com/join/fqM8ntWF</p>
@@ -224,7 +217,7 @@
     </footer>
 
     <div class="dock" role="region" aria-label="Скачать бета">
-      <a class="btn btn--dock" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
+      <a class="btn-tf btn-tf--dock" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
         Скачать в TestFlight
       </a>
     </div>
