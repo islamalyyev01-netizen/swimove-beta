@@ -666,25 +666,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  height: 3rem;
+  width: 100%;
+  height: 2.75rem;
 }
 
 .neon-card__logo {
   display: block;
-  width: auto;
-  max-width: 11.5rem;
+  width: 11rem;
   height: 2.5rem;
+  max-width: 11rem;
   object-fit: contain;
   object-position: left center;
   opacity: 1;
   filter: brightness(1.25) contrast(1.1) drop-shadow(0 0 12px rgba(255, 255, 255, 0.22));
   transform: translateY(0) scale(1);
   transition: transform 0.45s var(--ease), filter 0.45s var(--ease);
-}
-
-.neon-card__logo--garmin {
-  max-width: 12.5rem;
-  height: 2.35rem;
 }
 
 .neon-card__text {
