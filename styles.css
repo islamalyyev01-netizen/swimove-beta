@@ -87,9 +87,9 @@ body {
 .top__brand {
   font-family: var(--font);
   font-weight: 700;
-  font-size: 0.95rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: -0.04em;
+  line-height: 1.22;
 }
 
 .top__link {
@@ -123,10 +123,9 @@ body {
   margin: 0 0 0.85rem;
   font-family: var(--font);
   font-weight: 700;
-  font-size: clamp(2.35rem, 10vw, 3.2rem);
+  font-size: clamp(1.125rem, 4.5vw, 1.375rem);
   letter-spacing: -0.04em;
-  line-height: 0.95;
-  text-transform: uppercase;
+  line-height: 1.22;
 }
 
 .headline {
