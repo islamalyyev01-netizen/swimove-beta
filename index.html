@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
     <meta
       name="description"
-      content="Swimove — понятные и эффективные тренировки по плаванию. Закрытая бета в TestFlight."
+      content="Swimove — понятные и эффективные тренировки по плаванию."
     />
     <meta name="theme-color" content="#050505" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -19,13 +19,22 @@
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <div class="site-bg" aria-hidden="true">
-      <div class="site-bg__photo"></div>
-      <div class="site-bg__veil"></div>
-    </div>
+    <div class="site-bg" aria-hidden="true"></div>
 
-    <header class="top">
-      <span class="top__brand">Swimove</span>
+    <header class="masthead" aria-label="Шапка">
+      <img
+        class="masthead__photo"
+        src="./assets/header-ow-bw.jpg"
+        alt="Пловцы на открытой воде"
+        width="1848"
+        height="900"
+        decoding="async"
+        fetchpriority="high"
+      />
+      <div class="masthead__veil" aria-hidden="true"></div>
+      <div class="masthead__bar">
+        <span class="top__brand">Swimove</span>
+      </div>
     </header>
 
     <section class="hero" aria-label="Главный экран">
@@ -39,7 +48,6 @@
         <a class="btn-tf" href="https://testflight.apple.com/join/fqM8ntWF" rel="noopener noreferrer">
           Скачать в TestFlight
         </a>
-        <p class="hint">iPhone · iOS 16+ · нужен TestFlight</p>
       </div>
     </section>
 
@@ -233,24 +241,11 @@
           </article>
         </div>
 
-        <p class="beta-pill">
-          <span class="beta-pill__dot" aria-hidden="true"></span>
-          Поддержка в бета-версии
-        </p>
-      </section>
-
-      <section class="block block--cta" id="beta">
-        <h2 class="block__title">Закрытая бета</h2>
-        <p class="block__text">
-          Нужен iPhone и приложение TestFlight. Скачать можно кнопкой в начале страницы.
-        </p>
       </section>
     </main>
 
     <footer class="foot">
       <span>© Swimove</span>
-      <span class="foot__sep" aria-hidden="true">·</span>
-      <span>Закрытая бета</span>
     </footer>
 
     <script src="./landing.js" defer></script>
